@@ -1,15 +1,35 @@
 function computerPlay(){
     const choices = [
-        "Rock",
-        "Paper",
-        "Sissors"
+        "rock",
+        "paper",
+        "sissors"
     ];
 
-    const computerChoice = Math.floor(Math.random() * choices.length);
+    const index = Math.floor(Math.random() * choices.length);
 
-    const choicehoice = choices[computerChoice];
+    const choice = choices[index];
 
-    console.log(choicehoice);
+    return choice
+
+    //console.log(choice);
 }
 
-computerPlay();
+const playerSelection = "Rock".toLowerCase();
+const computerSelection = computerPlay();
+
+function playRound(playerSelection, computerSelection){
+    if (playerSelection === "rock" && computerSelection === "paper") {
+        return "You Lose! Paper beats Rock"
+    }else if (playerSelection === "rock" && computerSelection === "sissors"){
+        return "You Win! Rock beats Sissors"
+    }else {
+        return "Place Holder"
+    }
+}
+
+
+console.log(computerSelection)
+console.log(playerSelection)
+
+
+console.log(playRound(playerSelection, computerSelection));
