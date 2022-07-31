@@ -18,28 +18,7 @@ function computerPlay(){
 const playerSelection = "Paper".toLowerCase();
 const computerSelection = computerPlay();
 
-//plays a round and returns score
-// function playRound(playerSelection){
-//     let computerSelection = computerPlay()
-//     if (playerSelection === "rock" && computerSelection === "paper" ||
-//         playerSelection === "paper" && computerSelection === "sissors" ||
-//         playerSelection === "sissors" && computerSelection === "rock") {
-//             computerScore += 1
-//             return "You Lose! " + playerSelection + " Loses to " + computerSelection + "!"
-//     }else if (playerSelection === "rock" && computerSelection === "sissors" ||
-//         playerSelection === "paper" && computerSelection === "rock" ||
-//         playerSelection === "sissors" && computerSelection === "paper"){
-//             playerScore += 1
-//             return "You Win! " + playerSelection + " Beats " + computerSelection + "!"
-//     }else {
-//         return "Its a Draw"
-//         // playerScore += 0
-//         // computerScore += 0
-//     }
-// }
-
-function playRound(playerSelection){
-    let computerSelection = computerPlay()
+function playRound(){
     if (playerSelection === computerSelection) {
         return "Its a Draw"
     }else if ( playerSelection === "rock" && computerSelection === "paper" ||
