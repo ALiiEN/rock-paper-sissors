@@ -41,13 +41,15 @@ console.log("Player score: " + playerScore)
 console.log("Computer score: " + computerScore)
 
 //plays 5 rounds logs score each time
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound(playerSelection)
-        console.log(result)
-        console.log("Player score: " + playerScore)
-        console.log("Computer score: " + computerScore)
-    }
-}
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+//         playRound()
+//         console.log(playerSelection)
+//         console.log(computerSelection)
+//         console.log(result)
+//         console.log("Player score: " + playerScore)
+//         console.log("Computer score: " + computerScore)
+//     }
+// }
 
-//game()
+// game()
