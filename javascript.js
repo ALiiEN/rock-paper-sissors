@@ -1,5 +1,7 @@
 let playerScore = 0
 let computerScore = 0
+// let result = " "
+// let playerSelection = "";
 
 // generates random computer choice
 function computerPlay(){
@@ -18,19 +20,21 @@ function computerPlay(){
 const playerSelection = "Paper".toLowerCase();
 const computerSelection = computerPlay();
 
-function playRound(){
+function playRound(playerSelection){
+    let result = "";
     if (playerSelection === computerSelection) {
-        return "Its a Draw"
-    }else if ( playerSelection === "rock" && computerSelection === "paper" ||
+        return result = "Its a Draw";
+    }else if ( 
+    playerSelection === "rock" && computerSelection === "paper" ||
     playerSelection === "paper" && computerSelection === "sissors" ||
     playerSelection === "sissors" && computerSelection === "rock"){
         computerScore += 1
-        return "You Lose! " + playerSelection + " Loses to " + computerSelection + "!"
+        return result = "You Lose! " + playerSelection + " Loses to " + computerSelection + "!";
     }else {
         playerScore += 1
-        return "You Win! " + playerSelection + " Beats " + computerSelection + "!"
+        return result = "You Win! " + playerSelection + " Beats " + computerSelection + "!";
     }
-}
+};
 
 let result = playRound()
 
