@@ -1,8 +1,5 @@
 let playerScore = 0
 let computerScore = 0
-// let result = " "
-// let playerSelection = "";
-
 // generates random computer choice
 function computerPlay(){
     const choices = [
@@ -21,6 +18,7 @@ const playerSelection = "Paper".toLowerCase();
 const computerSelection = computerPlay();
 
 function playRound(playerSelection){
+    console.log(playerSelection)
     let result = "";
     if (playerSelection === computerSelection) {
         return result = "Its a Draw";
@@ -36,9 +34,9 @@ function playRound(playerSelection){
     }
 };
 
-let result = playRound()
+result = playRound(playerSelection);
 
-console.log(playerSelection)
+
 console.log(computerSelection)
 console.log(result)
 console.log("Player score: " + playerScore)
