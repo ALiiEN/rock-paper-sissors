@@ -14,12 +14,13 @@ function computerPlay(){
     return choice
 }
 
-const playerSelection = "Paper".toLowerCase();
-const computerSelection = computerPlay();
+let playerSelection = "Paper".toLowerCase();
+let computerSelection = computerPlay();
 
 function playRound(playerSelection){
-    console.log(playerSelection)
-    let result = "";
+    computerSelection = computerPlay();
+
+  let result = "";
     if (playerSelection === computerSelection) {
         return result = "Its a Draw";
     }else if ( 
@@ -34,24 +35,17 @@ function playRound(playerSelection){
     }
 };
 
-result = playRound(playerSelection);
-
-
-console.log(computerSelection)
-console.log(result)
-console.log("Player score: " + playerScore)
-console.log("Computer score: " + computerScore)
 
 //plays 5 rounds logs score each time
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-//         playRound()
-//         console.log(playerSelection)
-//         console.log(computerSelection)
-//         console.log(result)
-//         console.log("Player score: " + playerScore)
-//         console.log("Computer score: " + computerScore)
-//     }
-// }
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const result = playRound(playerSelection)
+        console.log(playerSelection)
+        console.log(computerSelection)
+        console.log(result)
+        console.log("Player score: " + playerScore)
+        console.log("Computer score: " + computerScore)
+    }
+}
 
-// game()
+game();
